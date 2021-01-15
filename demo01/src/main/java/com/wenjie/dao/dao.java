@@ -7,4 +7,7 @@ import java.util.List;
 public interface dao {
 
     public List<user> getall();
+
+
+
 }
