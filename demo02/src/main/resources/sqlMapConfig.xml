@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--开启延迟加载-->
+    <setttings >
+        <setting name="" value=""  ></setting>
+        <setting name="" value=""></setting>
+        <setting name="" value=""></setting>
+    </setttings>
+
+    <properties resource="mybatis.properties" ></properties>
+    <environments default="mysql" >
+        <environment id="mysql">
+
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"></property>
+                <property name="url" value="${url}"></property>
+                <property name="username" value="${username}"></property>
+                <property name="password" value="${password}"></property>
+            </dataSource>
+
+        </environment>
+    </environments>
+    
+
+<mappers>
+    <mapper resource="com/wenjie/dao/demo1.xml"></mapper>
+
+</mappers>
+</configuration>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 配置serive
+        第一种方式创建bean对象
+    -->
+    <bean id="a" class="com.wenjie.dao.takebean1.dao1"></bean>
+
+    <!--第二种方式创建bean对象-->
+    <bean id="b" class="com.wenjie.dao.takebean2.BeanFactory"></bean>
+    <bean id="c" factory-bean="b" factory-method="take"></bean>
+
+
+
+
+
+</beans>

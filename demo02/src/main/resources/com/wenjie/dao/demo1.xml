@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wenjie.dao.demo">
+    <select id="findall" resultType="com.wenjie.domain.User">
+        select * from user;
+    </select>
+
+    <select id="findeach" resultType="com.wenjie.domain.User" parameterType="com.wenjie.domain.para">
+        select * from user
+        <foreach collection="li" open="where id in(" close=")" item="id" separator=",">#{id}</foreach>
+    </select>
+
+        <!--    延迟加载类的话        -->
+    <resultMap id="a" type="com.wenjie.domain.para">
+        <id property="" column=""></id>
+        <result property="" column=""></result>
+        <association property="类的对应变量" column="指定索引的参数" javaType="数据类型" select="使用哪一个select进行查找"></association>
+
+    </resultMap>
+    <select id="" parameterType="" resultType=""></select>
+
+
+    <!--    延迟加载集合的话    -->
+    <resultMap id="" type="">
+        <id property="" column=""></id>
+        <result property="" column=""></result>
+        <collection property="" column="" ofType="" select=""></collection>
+    </resultMap>
+    <select id="" parameterType="" resultType=""></select>
+
+    <!-- 正常使用的话   -->
+    <resultMap id="" type="">
+        <id property="" column=""></id>
+        <result property="" column=""></result>
+        <association property="" >
+            <id property="" column=""></id>
+            <result property="" column=""></result>
+
+        </association>
+    </resultMap>
+
+
+
+
+
+
+
+</mapper>
